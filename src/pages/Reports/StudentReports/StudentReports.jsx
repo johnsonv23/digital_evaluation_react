@@ -5,7 +5,7 @@ import { fetchStudentReport } from "../../../services/reports/studentReportServi
 import { downloadExcel, downloadPdf } from "../../../services/reports/studentExportService";
 import { downloadFile } from "../../../utils/fileDownload";
 
-import "./StudentReport.css";
+import "./StudentReports.css";
 
 function StudentReport() {
   const [filters, setFilters] = useState({
