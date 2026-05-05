@@ -10,7 +10,7 @@ import Students from "./pages/Students/Students.jsx";
 import Branches from "./pages/Branches/Branches.jsx";
 import Courses from "./pages/Courses/Courses.jsx";
 import Subjects from "./pages/Subjects/Subjects.jsx";
-import CourseSubjects from "./pages/Coursesubjects/Coursesubjects.jsx";
+import CourseSubjects from "./pages/CourseSubjects/CourseSubjects.jsx";
 import Faculty from "./pages/Faculty/Faculty.jsx";
 import Exams from "./pages/Exams/Exams.jsx";
 import Answersheets from "./pages/Answersheets/Answersheets.jsx";
