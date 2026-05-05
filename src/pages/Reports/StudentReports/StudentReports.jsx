@@ -7,7 +7,7 @@ import { downloadFile } from "../../../utils/fileDownload";
 
 import "./StudentReports.css";
 
-function StudentReport() {
+function StudentReports() {
   const [filters, setFilters] = useState({
     examId: "",
     search: "",
@@ -159,4 +159,4 @@ function StudentReport() {
   );
 }
 
-export default StudentReport;
+export default StudentReports;
