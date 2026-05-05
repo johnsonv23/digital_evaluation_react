@@ -17,7 +17,7 @@ import Answersheets from "./pages/Answersheets/Answersheets.jsx";
 import FacultySubject from "./pages/FacultySubject/FacultySubject.jsx";
 import Evaluations from "./pages/Evaluations/Evaluations.jsx";
 import Questions from "./pages/Questions/Questions.jsx";
-import EditQuestion from "./pages/Questions/Editquestion.jsx";
+import EditQuestion from "./pages/Questions/EditQuestion.jsx";
 import QuestionOption from "./pages/QuestionOption/QuestionOption.jsx";
 import Layout from "./pages/Layout/Layout.jsx";
 import RevaluationRequests from "./pages/RevaluationRequests/RevaluationRequests.jsx";
