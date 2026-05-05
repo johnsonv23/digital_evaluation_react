@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import MenuList from "../../components/Menu/MenuList";
 import { AuthContext } from "../../context/AuthContext";
-import { logoutUser } from "../../services/AuthService"; // use the service we fixed
+import { logoutUser } from "../../services/authService"; // use the service we fixed
 import "./Layout.css";
 
 function Layout() {
