@@ -5,25 +5,31 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => {
   const isDev = mode === 'development';
+  let httpsConfig = false;
 
-  // Properly resolve current directory in ESM (Windows safe)
-  const currentDir = path.dirname(new URL(import.meta.url).pathname).replace(/^\/([A-Za-z]:)/, '$1');
+  if (isDev) {
+    try {
+      const currentDir = path
+        .dirname(new URL(import.meta.url).pathname)
+        .replace(/^\/([A-Za-z]:)/, '$1');
+
+      httpsConfig = {
+        key: fs.readFileSync(path.resolve(currentDir, 'localhost-key.pem')),
+        cert: fs.readFileSync(path.resolve(currentDir, 'localhost.pem')),
+      };
+    } catch {
+      console.warn('mkcert files not found, running without HTTPS');
+    }
+  }
 
   return {
     plugins: [react()],
-    server: isDev
-      ? {
-          port: 5173,
-          https: {
-            key: fs.readFileSync(path.resolve(currentDir, 'localhost-key.pem')),
-            cert: fs.readFileSync(path.resolve(currentDir, 'localhost.pem')),
-          },
-        }
-      : {
-          port: 5173, // ignored by Vercel
-        },
+    server: {
+      port: 5173,
+      https: httpsConfig,
+    },
     build: {
-      outDir: 'build', // Vercel expects this
+      outDir: 'build',
     },
   };
 });
