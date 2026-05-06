@@ -35,7 +35,7 @@ import RevaluationMarks from "./pages/RevaluationMarks/RevaluationMarks.jsx";
 import QuestionReport from "./pages/Reports/QuestionReport/QuestionReport.jsx";
 import DashboardReport from "./pages/Reports/DashboardReport/DashboardReport.jsx";
 import ActivityLogs from "./pages/ActivityLogs/ActivityLogs.jsx";
-
+import AuditLogs from "./pages/AuditLogs/AuditLogs.jsx";
 
 function App() {
   return (
@@ -89,6 +89,7 @@ function App() {
             <Route path="reports/question" element={<QuestionReport />} />
             <Route path="reports/dashboard" element={<DashboardReport />} />
             <Route path="activitylogs" element={<ActivityLogs />} />
+            <Route path="auditlogs" element={<AuditLogs />} />
 
           </Route>
         </Routes>
