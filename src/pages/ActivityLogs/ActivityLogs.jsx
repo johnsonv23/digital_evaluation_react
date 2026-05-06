@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 import {
   fetchPagedLogs
-} from "../../services/activityLogService";
+} from "../../services/ActivityLogService";
 
 import "./ActivityLogs.css";
 
